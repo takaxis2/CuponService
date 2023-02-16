@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/coupon_service
+    username: root
+    password: 1q2w3e4r!
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    # database-platform: org.hibernate.dialect.MariaDB103Dialect
+    hibernate:
+      # ddl-auto: update
+      show-sql: true
+      open-in-view: false
+      naming:
+        physical-strategy: com.example.coupon_service.configuration.CustomNamingStrategy
+      # physical-naming-strategy: com.example.coupon_service.configuration.CustomNamingStrategy
+server:
+  port: 5256
